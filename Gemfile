@@ -39,6 +39,13 @@ group :development, :test do
   gem 'byebug'
 end
 
+group :test do
+  # Call 'byebug' anywhere in the code to stop execution and get a debugger console
+  gem 'rspec-rails'
+  gem 'factory_girl_rails'
+  gem 'ffaker'
+end
+
 group :development do
   gem 'sqlite3'
   # Access an IRB console on exception pages or by using <%= console %> in views
