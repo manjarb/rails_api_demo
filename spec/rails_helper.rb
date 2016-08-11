@@ -54,4 +54,20 @@ RSpec.configure do |config|
   config.filter_rails_from_backtrace!
   # arbitrary gems may also be filtered via:
   # config.filter_gems_from_backtrace("gem name")
+  #config.render_views = true
+
+  #config.include Devise::Test::ControllerHelpers, type: :controller
+  #config.include Devise::Test::ControllerHelpers, type: :view
+
+  config.include Devise::TestHelpers, :type => :controller
+  #config.extend ControllerMacros, :type => :controller
+
+end
+
+Shoulda::Matchers.configure do |config|
+  config.integrate do |with|
+    # Choose a test framework:
+    with.test_framework :rspec
+    with.library :rails
+  end
 end
