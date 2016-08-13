@@ -13,9 +13,11 @@ Rails.application.routes.draw do
       resources :users, :only => [:show, :create, :update, :destroy] do
         # this is the line
         resources :products, :only => [:create, :update, :destroy]
+        resources :orders, :only => [:index]
       end
       resources :sessions, :only => [:create, :destroy]
       resources :products, :only => [:show, :index]
+      resources :orders, :only => [:index, :show, :create]
 
     end
 
