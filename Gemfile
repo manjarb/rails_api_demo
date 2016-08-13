@@ -40,6 +40,7 @@ gem 'compass-rails', '>= 2.0.4'
 gem 'furatto', github: "IcaliaLabs/furatto-rails"
 gem 'font-awesome-rails'
 gem 'simple_form'
+gem 'kaminari'
 
 
 group :development, :test do
